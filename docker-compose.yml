@@ -1,0 +1,11 @@
+version: "3"
+services:
+  squid:
+    build:
+      context: "./image/"
+      args:
+        ALPINE_VERSION: "latest"
+    image: "dekart811/apt-cache:latest"
+    restart: "unless-stopped"
+    ports:
+      - "3128:3128"
